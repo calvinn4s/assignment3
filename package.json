@@ -6,7 +6,7 @@
   "scripts": {
     "tw": "bun tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "dev": "concurrently \"bun run tw\" \"bun run index.html\"",
-    "tw:build": "bunx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css",
+    "tw:build": "bunx tailwindcss -i ./src/input.css -o ./dist/output.css",
     "build": "concurrently \"bun tw:build\" \"bun build ./src/main.js --outdir ./dist\""
   },
   "dependencies": {
