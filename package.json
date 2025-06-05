@@ -1,0 +1,20 @@
+{
+  "name": "tailwindcss",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "tw": "bun tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "dev": "concurrently \"bun run tw\" \"bun run index.html\"",
+    "tw:build": "bunx tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "build": "concurrently \"bun tw:build\" \"bun build ./src/main.js --outdir ./dist\""
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "tailwindcss": "^4.1.8",
+    "typed.js": "^2.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
